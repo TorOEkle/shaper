@@ -7,6 +7,10 @@ Shaper is a lightweight, SQL-first dashboard tool. It lets you turn a single
 `.dashboard.sql` file into an interactive report with filters, charts, and
 exports, all backed by DuckDB.
 
+I checked out Shaper because I'm curious about lightweight tools that fit into
+a simple data ops tech stack—no heavy BI platforms or complex infrastructure,
+just DuckDB + Delta Lake + a single SQL file that becomes a working dashboard.
+
 ![Shaper screenshot](shaper_screenshot.png)
 
 Prereqs
