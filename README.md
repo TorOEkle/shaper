@@ -78,6 +78,16 @@ When Shaper opens, load the dashboard file:
 
 - [sales_analytics.dashboard.sql](sales_analytics.dashboard.sql)
 
+Data Path
+---------
+In this repo, `data/` is a symlink to `/home/toekle/delta-demo-data` (a Linux
+filesystem path). This avoids delta-rs write failures on WSL `/mnt` mounts.
+
+The dashboard SQL uses absolute paths to ensure Shaper can find the Delta tables
+regardless of working directory:
+- `/home/toekle/delta-demo-data/customers`
+- `/home/toekle/delta-demo-data/orders`
+
 Notes
 -----
 - If you want a different output directory, set `DELTA_OUTPUT_DIR`.
